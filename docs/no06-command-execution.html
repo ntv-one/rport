@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-DE">
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"><link rel="manifest" href="/favicon/site.webmanifest"><meta name="application-name" content="docs"><meta name="apple-mobile-web-app-title" content="docs"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png"><meta name="msapplication-TileColor" content="#0075ec"><meta name="theme-color" content="#0075ec"><title>Command execution | rport</title><meta name="description" content="Rport helps you to manage your remote servers without the hassle of VPNs, chained SSH connections, jump-hosts, or the use of commercial tools like TeamViewer and its clones."><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="VuePress 2.0.0-beta.6">
+    <link rel="preload" href="/assets/js/runtime~app.7377af8b.js" as="script"><link rel="preload" href="/assets/css/styles.11e0e726.css" as="style"><link rel="preload" href="/assets/js/101.b17c34eb.js" as="script"><link rel="preload" href="/assets/js/app.3ad03ed8.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.11e0e726.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><header class="navbar"><div class="toggle-sidebar-button"><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class=""></path></svg></div><span><a href="/" class=""><img class="logo" src="/logo/rport-img-text.svg" alt="rport"><span class="site-name can-hide">rport</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/docs/" class="nav-link router-link-active" aria-label="Documentation"><!--[--><!--]--> Documentation <!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport/discussions" rel="noopener noreferrer" target="_blank" aria-label="Help"><!--[--><!--]--> Help <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport/wiki" rel="noopener noreferrer" target="_blank" aria-label="Wiki"><!--[--><!--]--> Wiki <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport/releases" rel="noopener noreferrer" target="_blank" aria-label="Download"><!--[--><!--]--> Download <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport" rel="noopener noreferrer" target="_blank" aria-label="Github-Repo"><!--[--><!--]--> Github-Repo <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/docs/" class="nav-link router-link-active" aria-label="Documentation"><!--[--><!--]--> Documentation <!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport/discussions" rel="noopener noreferrer" target="_blank" aria-label="Help"><!--[--><!--]--> Help <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport/wiki" rel="noopener noreferrer" target="_blank" aria-label="Wiki"><!--[--><!--]--> Wiki <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport/releases" rel="noopener noreferrer" target="_blank" aria-label="Download"><!--[--><!--]--> Download <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/cloudradar-monitoring/rport" rel="noopener noreferrer" target="_blank" aria-label="Github-Repo"><!--[--><!--]--> Github-Repo <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--[--><section class="sidebar-group"><p class="sidebar-heading active">Documentation</p><ul class=""><li><!--[--><a href="/docs/" class="nav-link router-link-active sidebar-link" aria-label="Quick Start"><!--[--><!--]--> Quick Start <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no01-on-demand-tunnels.html" class="nav-link sidebar-link" aria-label="On-demand tunnels using the API"><!--[--><!--]--> On-demand tunnels using the API <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no02-api-auth.html" class="nav-link sidebar-link" aria-label="API Authentication"><!--[--><!--]--> API Authentication <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no03-client-auth.html" class="nav-link sidebar-link" aria-label="Client Authentication"><!--[--><!--]--> Client Authentication <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no04-client-groups.html" class="nav-link sidebar-link" aria-label="Client Groups"><!--[--><!--]--> Client Groups <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no05-client-on-other-os.html" class="nav-link sidebar-link" aria-label="Install and run a rport client"><!--[--><!--]--> Install and run a rport client <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a aria-current="page" href="/docs/no06-command-execution.html" class="router-link-active router-link-exact-active nav-link router-link-active sidebar-link active" aria-label="Command execution"><!--[--><!--]--> Command execution <!--[--><!--]--></a><ul class="sidebar-sub-headers"><li><!--[--><a aria-current="page" href="/docs/no06-command-execution.html#execute-on-a-single-host" class="router-link-active router-link-exact-active nav-link sidebar-link" aria-label="Execute on a single host"><!--[--><!--]--> Execute on a single host <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a aria-current="page" href="/docs/no06-command-execution.html#execute-on-multiple-hosts" class="router-link-active router-link-exact-active nav-link sidebar-link" aria-label="Execute on multiple hosts"><!--[--><!--]--> Execute on multiple hosts <!--[--><!--]--></a><ul class="sidebar-sub-headers"><li><!--[--><a aria-current="page" href="/docs/no06-command-execution.html#by-client-ids" class="router-link-active router-link-exact-active nav-link sidebar-link" aria-label="By client IDs"><!--[--><!--]--> By client IDs <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a aria-current="page" href="/docs/no06-command-execution.html#by-client-group-ids" class="router-link-active router-link-exact-active nav-link sidebar-link" aria-label="By client group IDs"><!--[--><!--]--> By client group IDs <!--[--><!--]--></a><!----><!--]--></li></ul><!--]--></li><li><!--[--><a aria-current="page" href="/docs/no06-command-execution.html#securing-your-environment" class="router-link-active router-link-exact-active nav-link sidebar-link" aria-label="Securing your environment"><!--[--><!--]--> Securing your environment <!--[--><!--]--></a><!----><!--]--></li></ul><!--]--></li><li><!--[--><a href="/docs/no07-frontend.html" class="nav-link sidebar-link" aria-label="Rport Frontend"><!--[--><!--]--> Rport Frontend <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no08-https-howto.html" class="nav-link sidebar-link" aria-label="Securing the Rportd API with HTTPS"><!--[--><!--]--> Securing the Rportd API with HTTPS <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no09-managing-tunnels.html" class="nav-link sidebar-link" aria-label="Managing tunnels"><!--[--><!--]--> Managing tunnels <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a href="/docs/no10-multi-tenancy.html" class="nav-link sidebar-link" aria-label="Multi tenancy (NOT SUPPORTED YET)"><!--[--><!--]--> Multi tenancy (NOT SUPPORTED YET) <!--[--><!--]--></a><!----><!--]--></li></ul></section><!--]--><!--]--></ul><!--[--><!--]--></aside><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="command-execution"><a class="header-anchor" href="#command-execution">#</a> Command execution</h1><p>Via the API you can execute a command on connected clients. The command and the response are transferred through the web socket connection. A tunnel is not needed.</p><p>Command can be executed via:</p><ul><li><a href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/cloudradar-monitoring/rport/master/api-doc.yml#/Commands" target="_blank" rel="noopener noreferrer">REST API<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></li><li><a href="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/cloudradar-monitoring/rport/master/api-doc.yml#/Commands/get_ws_commands" target="_blank" rel="noopener noreferrer">WebSocket API<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></li></ul><p>Here we would show examples how to do it via REST API.</p><h2 id="execute-on-a-single-host"><a class="header-anchor" href="#execute-on-a-single-host">#</a> Execute on a single host</h2><p>Example:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>CLIENTID=my-client
+curl -s -u admin:foobaz http://localhost:3000/api/v1/clients/$CLIENTID/commands -H &quot;Content-Type: application/json&quot; -X POST \
+--data-raw &#39;{
+  &quot;command&quot;: &quot;date&quot;,
+  &quot;timeout_sec&quot;: 10
+}&#39;|jq
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>You will get back a job id. Now execute a query to get the result of the command.</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>JOBID=f72b69fd-f418-40c3-ab62-4ce2c2022c58
+curl -s -u admin:foobaz http://localhost:3000/api/v1/clients/$CLIENTID/commands/$JOBID|jq
+{
+    &quot;data&quot;: {
+        &quot;jid&quot;: &quot;f72b69fd-f418-40c3-ab62-4ce2c2022c58&quot;,
+        &quot;status&quot;: &quot;successful&quot;,
+        &quot;finished_at&quot;: &quot;2020-10-15T15:30:12.937267522Z&quot;,
+        &quot;client_id&quot;: &quot;my-client&quot;,
+        &quot;command&quot;: &quot;date&quot;,
+        &quot;shell&quot;: &quot;/bin/sh&quot;,
+        &quot;pid&quot;: 908526,
+        &quot;started_at&quot;: &quot;2020-10-15T15:30:12.934238782Z&quot;,
+        &quot;created_by&quot;: &quot;admin&quot;,
+        &quot;timeout_sec&quot;: 10,
+        &quot;result&quot;: {
+            &quot;stdout&quot;: &quot;Thu Oct 15 15:30:12 UTC 2020\n&quot;,
+            &quot;stderr&quot;: &quot;&quot;
+        }
+    }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>The rport client supervises the command for the given {timeout_sec} seconds. If the timeout is exceeded the command state is considered &#39;unknown&#39; but the command keeps running.</p><h2 id="execute-on-multiple-hosts"><a class="header-anchor" href="#execute-on-multiple-hosts">#</a> Execute on multiple hosts</h2><p>It can be done by using:</p><ul><li>client IDs</li><li>group IDs</li><li>both client IDs and group IDs</li></ul><p>Execution options:</p><ul><li><code>execute_concurrently</code>. By default, commands are not executed concurrently. To execute it concurrently set it to <code>true</code> in a request.</li><li><code>abort_on_error</code>. By default, if the execution fails on some client, the entire cycle is aborted. But it is ignored in parallel mode when <code>&quot;execute concurrently&quot;: true</code>. Disabling <code>abort_on_error</code> executes the command on all clients regardless there is an error or not.</li></ul><h3 id="by-client-ids"><a class="header-anchor" href="#by-client-ids">#</a> By client IDs</h3><p>Example:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>curl -s -u admin:foobaz http://localhost:3000/api/v1/commands -H &quot;Content-Type: application/json&quot; -X POST \
+--data-raw &#39;{
+  &quot;command&quot;: &quot;/bin/date&quot;,
+  &quot;client_ids&quot;: [&quot;local-test-client-2&quot;, &quot;local-test-client-3&quot;, &quot;local-test-client-4&quot;],
+  &quot;timeout_sec&quot;: 30,
+  &quot;execute_concurrently&quot;: true
+}
+&#39;|jq
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>You will get back a job id. Now execute a query to get the result of the command.</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>JOBID=f206854c-af1d-4589-9adc-bdf3553ec68b
+curl -s -u admin:foobaz http://localhost:3000/api/v1/commands/$JOBID|jq
+{
+  &quot;data&quot;: {
+    &quot;jid&quot;: &quot;f206854c-af1d-4589-9adc-bdf3553ec68b&quot;,
+    &quot;started_at&quot;: &quot;2021-01-28T19:39:16.197965+02:00&quot;,
+    &quot;created_by&quot;: &quot;admin&quot;,
+    &quot;client_ids&quot;: [
+      &quot;local-test-client-2&quot;,
+      &quot;local-test-client-3&quot;,
+      &quot;local-test-client-4&quot;
+    ],
+    &quot;group_ids&quot;: null,
+    &quot;command&quot;: &quot;/bin/date&quot;,
+    &quot;shell&quot;: &quot;&quot;,
+    &quot;timeout_sec&quot;: 30,
+    &quot;concurrent&quot;: true,
+    &quot;abort_on_err&quot;: false,
+    &quot;jobs&quot;: [
+      {
+        &quot;jid&quot;: &quot;4012fcf8-0dfc-44c4-a3de-de1b133bb13e&quot;,
+        &quot;status&quot;: &quot;successful&quot;,
+        &quot;finished_at&quot;: &quot;2021-01-28T19:39:16.227685+02:00&quot;,
+        &quot;client_id&quot;: &quot;local-test-client-2&quot;,
+        &quot;command&quot;: &quot;/bin/date&quot;,
+        &quot;shell&quot;: &quot;/bin/sh&quot;,
+        &quot;pid&quot;: 16242,
+        &quot;started_at&quot;: &quot;2021-01-28T19:39:16.203396+02:00&quot;,
+        &quot;created_by&quot;: &quot;admin&quot;,
+        &quot;timeout_sec&quot;: 30,
+        &quot;multi_job_id&quot;: &quot;f206854c-af1d-4589-9adc-bdf3553ec68b&quot;,
+        &quot;result&quot;: {
+          &quot;stdout&quot;: &quot;Thu Jan 28 19:39:16 EET 2021\n&quot;,
+          &quot;stderr&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;jid&quot;: &quot;7b8d90a0-f100-4922-98e6-4da46853c020&quot;,
+        &quot;status&quot;: &quot;successful&quot;,
+        &quot;finished_at&quot;: &quot;2021-01-28T19:39:16.229916+02:00&quot;,
+        &quot;client_id&quot;: &quot;local-test-client-3&quot;,
+        &quot;command&quot;: &quot;/bin/date&quot;,
+        &quot;shell&quot;: &quot;/bin/sh&quot;,
+        &quot;pid&quot;: 16241,
+        &quot;started_at&quot;: &quot;2021-01-28T19:39:16.203738+02:00&quot;,
+        &quot;created_by&quot;: &quot;admin&quot;,
+        &quot;timeout_sec&quot;: 30,
+        &quot;multi_job_id&quot;: &quot;f206854c-af1d-4589-9adc-bdf3553ec68b&quot;,
+        &quot;result&quot;: {
+          &quot;stdout&quot;: &quot;Thu Jan 28 19:39:16 EET 2021\n&quot;,
+          &quot;stderr&quot;: &quot;&quot;
+        }
+      },
+      {
+        &quot;jid&quot;: &quot;bb936408-8c02-49b2-a0ac-2750ac44026c&quot;,
+        &quot;status&quot;: &quot;successful&quot;,
+        &quot;finished_at&quot;: &quot;2021-01-28T19:39:16.228102+02:00&quot;,
+        &quot;client_id&quot;: &quot;local-test-client-4&quot;,
+        &quot;command&quot;: &quot;/bin/date&quot;,
+        &quot;shell&quot;: &quot;/bin/sh&quot;,
+        &quot;pid&quot;: 16243,
+        &quot;started_at&quot;: &quot;2021-01-28T19:39:16.204308+02:00&quot;,
+        &quot;created_by&quot;: &quot;admin&quot;,
+        &quot;timeout_sec&quot;: 30,
+        &quot;multi_job_id&quot;: &quot;f206854c-af1d-4589-9adc-bdf3553ec68b&quot;,
+        &quot;result&quot;: {
+          &quot;stdout&quot;: &quot;Thu Jan 28 19:39:16 EET 2021\n&quot;,
+          &quot;stderr&quot;: &quot;&quot;
+        }
+      }
+    ]
+  }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br></div></div><h3 id="by-client-group-ids"><a class="header-anchor" href="#by-client-group-ids">#</a> By client group IDs</h3><p>How to create client groups please see <a href="/docs/no04-client-groups.html" class="">the link</a>.</p><p>Assume we have already created a client group with <code>group-1</code> id. Example:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>curl -s -u admin:foobaz http://localhost:3000/api/v1/commands -H &quot;Content-Type: application/json&quot; -X POST \
+--data-raw &#39;{
+  &quot;command&quot;: &quot;/bin/date&quot;,
+  &quot;group_ids&quot;: [&quot;group-1&quot;],
+  &quot;execute_concurrently&quot;: false,
+  &quot;abort_on_error&quot;: true
+}
+&#39;|jq
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>You will get back a job id. Now execute the same query that is in a previous example to get the result of the command.</p><h2 id="securing-your-environment"><a class="header-anchor" href="#securing-your-environment">#</a> Securing your environment</h2><p>The commands are executed from the account that runs rport. On Linux this by default an unprivileged user. Do not run rport as root. On Windows, rport runs as a local service account that by default has administrative rights.</p><p>On the client using the <code>rport.conf</code> you can configure and limit the execution of remote commands.</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>[remote-commands]
+## Enable or disable remote commands.
+## Defaults: true
+#enabled = true
+
+## Allow commands matching the following regular expressions.
+## The filter is applied to the command sent. Full path must be used.
+## See {order} parameter for more details how it&#39;s applied together with {deny}.
+## Defaults: [&#39;^/usr/bin/.*&#39;,&#39;^/usr/local/bin/.*&#39;,&#39;^C:\\Windows\\System32\\.*&#39;]
+#allow = [&#39;^/usr/bin/.*&#39;,&#39;^/usr/local/bin/.*&#39;,&#39;^C:\\Windows\\System32\\.*&#39;]
+
+## Deny commands matching one of the following regular expressions.
+## The filter is applied to the command sent. Full path must be used.
+## See {order} parameter for more details how it&#39;s applied together with {allow}.
+## With the below default filter only single commands are allowed.
+## Defaults: [&#39;(\||&lt;|&gt;|;|,|\n|&amp;)&#39;]
+#deny = [&#39;(\||&lt;|&gt;|;|,|\n|&amp;)&#39;]
+
+## Order: [&#39;allow&#39;,&#39;deny&#39;] or [&#39;deny&#39;,&#39;allow&#39;]. Order of which filter is applied first.
+## Defaults: [&#39;allow&#39;,&#39;deny&#39;]
+##
+## order: [&#39;allow&#39;,&#39;deny&#39;]
+## First, all allow directives are evaluated; at least one must match, or the command is rejected.
+## Next, all deny directives are evaluated. If any matches, the command is rejected.
+## Last, any commands which do not match an allow or a deny directive are denied by default.
+## Example:
+## allow: [&#39;^/usr/bin/.*&#39;]
+## deny: [&#39;^/usr/bin/zip&#39;]
+## All commands in /usr/bin except &#39;/usr/bin/zip&#39; can be executed. Full path must be used.
+##
+## order: [&#39;deny&#39;,&#39;allow&#39;]
+## First, all deny directives are evaluated; if any match,
+## the command is denied UNLESS it also matches an allow directive.
+## Any command which do not match any allow or deny directives are permitted.
+## Example:
+## deny: [&#39;.*&#39;]
+## allow: [&#39;zip<!--vuepress-ssr-app-->#39;]
+## All commands are denied except those ending in zip.
+##
+#order = [&#39;allow&#39;,&#39;deny&#39;]
+
+## Limit the maximum length of the command output that is sent back.
+## Applies to the stdout and stderr separately.
+## If exceeded {send_back_limit} bytes are sent.
+## Defaults: 2048
+#send_back_limit = 2048
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><p><strong>Examples:</strong></p><p>On Linux only allow commands in <code>/usr/bin</code> and <code>/usr/local/bin</code> and command prefixed with <code>sudo -n</code>.</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>allow = [
+    &#39;^\/usr\/bin\/.*&#39;,
+    &#39;^\/usr\/local\/bin\/.*&#39;,
+    &#39;^sudo -n .*&#39;
+]
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>On Windows try this</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>allow = [
+    &#39;^C:\\Windows\\System32.*&#39;,
+    &#39;^C:\\Users\\Administrator\\scripts\\.*\.bat&#39;
+]
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>Using the above examples requires sending commands with a full path.</p><!--]--></div><footer class="page-meta"><!----><!----><!----></footer><nav class="page-nav"><p class="inner"><span class="prev"> ← <a href="/docs/no05-client-on-other-os.html" class="nav-link" aria-label="Install and run a rport client"><!--[--><!--]--> Install and run a rport client <!--[--><!--]--></a></span><span class="next"><a href="/docs/no07-frontend.html" class="nav-link" aria-label="Rport Frontend"><!--[--><!--]--> Rport Frontend <!--[--><!--]--></a> → </span></p></nav><!--[--><!--]--></main></div><div class="ga-consent"><p> By clicking &quot;Accept&quot;, you agree that we collect measurement data with Google Analytics. </p><button type="button" class="button primary">Accept</button></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.7377af8b.js" defer></script><script src="/assets/js/101.b17c34eb.js" defer></script><script src="/assets/js/app.3ad03ed8.js" defer></script>
+  </body>
+</html>
